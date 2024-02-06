@@ -72,7 +72,7 @@ class Engine(BaseEngine):  # pylint: disable=too-many-public-methods
         elif height > width:
             scale = float(width) / self.image.width
 
-        self.image = self.image.resize(scale, kernel="linear")
+        self.image = self.image.resize(scale, gap=0.0)
 
     def focus(self, points: List[FocalPoint]) -> None:
         pass
