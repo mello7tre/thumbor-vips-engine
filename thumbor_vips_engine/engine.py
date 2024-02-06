@@ -21,7 +21,7 @@ FORMATS = {
     ".jpeg": ".JPEG",
     ".gif": "GIF",
     ".png": "PNG",
-    ".webp": "WEBP",
+    ".webp": ".WEBP",
 }
 
 
