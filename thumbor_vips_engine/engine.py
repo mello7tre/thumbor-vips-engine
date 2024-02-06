@@ -113,7 +113,8 @@ class Engine(BaseEngine):  # pylint: disable=too-many-public-methods
     def paste(
         self, other_engine: BaseEngine, pos: int, merge: bool = True
     ) -> None:
-        raise NotImplementedError()
+        self.image = self.image.composite(other_engine.image, "over", x=pos[0], y=pos[1])
+        # raise NotImplementedError()
 
     def enable_alpha(self) -> None:
         if not self.image.hasalpha():
