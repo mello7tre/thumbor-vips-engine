@@ -116,7 +116,9 @@ class Engine(BaseEngine):  # pylint: disable=too-many-public-methods
         raise NotImplementedError()
 
     def enable_alpha(self) -> None:
-        raise NotImplementedError()
+        if not self.image.hasalpha():
+            self.image = self.image.addalpha()
+        # raise NotImplementedError()
 
     def image_data_as_rgb(
         self, update_image: bool = True
